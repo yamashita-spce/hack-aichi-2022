@@ -7,7 +7,7 @@ import string
 import time
 import datetime
 
-N = 3000
+N = 30
 
 #商品コードの生成する関数
 def randomname(n):
@@ -18,12 +18,18 @@ f = open("dummy_product_master.csv", "w")
 
 # 販売終了日初期データ
 indate = datetime.date(2019, 10, 1)
+
+
 # ハッカソン当日date
 nowdate = datetime.date(2022, 10, 9)
 
 for i in range(N):
 
-    pdate = indate + datetime.timedelta(random.randint(0, 5000))
+    if i < 4:
+        pdate = indate + datetime.timedelta(days=5000)
+    else:
+        pdate = indate + datetime.timedelta(random.randint(0, 5000))
+        
     date_format = pdate.strftime("%Y%m%d")
     if pdate > nowdate:
         date_format = ""

@@ -23,7 +23,7 @@ fdate = fdate.astype("str")
 # 総データ数統計
 n = 0
 
-f = open("demo_shipment_result.csv", "w", encoding='shift_jis') #商品マスタデータ
+f = open("demo_shipment_result.csv", "w", encoding='cp932') #商品マスタデータ
 func_f = open("demo_shipment_function.csv", "w")
 
 # 最初の出荷日の初期値（最大を４年前とする）
