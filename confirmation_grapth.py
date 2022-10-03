@@ -56,7 +56,7 @@ for k in range(4):
             data[i] = [i, 0]
             continue
 
-        data[i] = [i, df_samedate.iat[0,1]*df_samedate.shape[0]]
+        data[i] = [i, df_samedate["52"].sum()]
         
         
     plt.plot(data.T[0], data.T[1])
