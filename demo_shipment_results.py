@@ -99,7 +99,8 @@ for i in range(len(code)):
         for k in range(nn):
              
             # 出荷数量
-            Number_of_shipment = int(func[j] / nn) + random.randint(int(-func[j]/(nn*4)), int(func[j]/(nn*4)))
+            Number_of_shipment = int(func[j] / nn) + random.randint(int(-func[j]/(nn*20)), int(func[j]/(nn*20)))
+
 
             # 配送地域
             pregion = region[random.randrange(12)]
