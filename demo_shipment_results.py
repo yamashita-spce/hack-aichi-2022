@@ -99,7 +99,7 @@ for i in range(len(code)):
         for k in range(nn):
              
             # 出荷数量
-            Number_of_shipment = int(func[j] / nn) + random.randint(int(-func[j]/(nn*20)), int(func[j]/(nn*20)))
+            Number_of_shipment = int(func[j] / nn) + random.randint(int(-np.mean(func)/(nn*10)), int(np.mean(func)/(nn*10)))
 
 
             # 配送地域
